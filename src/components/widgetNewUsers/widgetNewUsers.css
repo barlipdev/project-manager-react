@@ -1,0 +1,62 @@
+.widgetNewUsers{
+    flex: 1.5;
+    box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
+    -webkit-box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
+    -moz-box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.widgetNewUsersTitle{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.widgetNewUsersImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.widgetNewUsersList{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.widgetNewUsersListItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px
+}
+
+.widgetNewUsersUser{
+    display: flex;
+    flex-direction: column;
+}
+
+.widgetNewUsersUsername{
+    font-weight: 600;
+}
+
+.widgetNewUsersUserEmail{
+    font-weight: 300;
+}
+
+.widgetNewUsersButton{
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 10px;
+    background-color: #eeeef7;
+    color: 555;
+    cursor: pointer;
+}
+
+.widgetNewUsersIcon{
+    font-size: 16px !important;
+    margin-right: 5px;
+}
