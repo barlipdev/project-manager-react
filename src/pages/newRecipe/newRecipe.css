@@ -1,0 +1,115 @@
+.newRecipe{
+    flex: 5;
+    padding: 20px;
+}
+
+.recipeContainers{
+    margin-top: 10px;
+    height: 52%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipeProductsTableContainer{
+    padding: 20px;
+    margin: 5px;
+    height: 340px;
+    flex: 1.2;
+    box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
+    -webkit-box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
+    -moz-box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
+}
+
+.recipeInfoContainer{
+    padding: 20px;
+    margin: 5px;
+    flex: 1.2;
+    box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
+    -webkit-box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
+    -moz-box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
+}
+
+.recipeProductsContainer{
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex: 2.8;
+    box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
+    -webkit-box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
+    -moz-box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
+}
+.recipeProductsContainerLeft{
+    padding: 5px;
+    margin: 5px;
+    flex: 2;
+}
+.recipeProductsContainerRight{
+    padding: 10px;
+    margin-top: 35px;
+    height: 220px;
+    flex: 0.8;
+    border: orange;
+    border-style: solid;
+    border-width: 1px;
+}
+.recipeInput{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.nameInput{
+    width: 500px;
+}
+
+.foodTypeInput{
+    width: 500px;
+}
+
+.descriptionInput{
+    width: 500px;
+}
+
+.productTypeInput{
+    width: 500px;
+}
+
+.addRecipeButton{
+    width: 200px;
+    border: none;
+    background-color: teal;
+    color: white;
+    padding: 7px 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.productDelete{
+    color: red;
+    cursor: pointer;
+}
+
+.recipeAddButton{
+    width: 160px;
+    border: none;
+    padding: 5px;
+    background-color: teal;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+.productTable{
+    margin-top: 10px;
+}
+
+.infoTitle{
+    color: red;
+    margin-left: 25px;
+}
+
+.infoBody{
+    margin: 10px;
+}

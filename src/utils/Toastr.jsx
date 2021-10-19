@@ -28,6 +28,7 @@ const ToastrComponent = ({ type, message }) => {
 };
 
 const showToastr = message => {
+  toast.configure();
   toast.success(<ToastrComponent type="success" message={message} />, {
     position: toast.POSITION.TOP_RIGHT,
     transition: Slide,
@@ -37,6 +38,7 @@ const showToastr = message => {
 const isError = e => e && e.stack && e.message;
 
 const showErrorToastr = error => {
+  toast.configure();
   const errorMessage = isError(error) ? error.message : error;
   toast.error(<ToastrComponent type="error" message={errorMessage} />, {
     position: toast.POSITION.TOP_RIGHT,

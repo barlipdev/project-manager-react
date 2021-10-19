@@ -13,6 +13,7 @@ import { useState } from "react";
 import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 import Toastr from '../../../utils/Toastr';
+import { ProgressSpinner } from 'primereact/progressspinner';
 
 function Copyright() {
     return (
@@ -50,6 +51,7 @@ function Copyright() {
 
 export default function Login() {
     const classes = useStyles();
+    const [inLogin, setInLogin] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const notifySuccess = (message) => Toastr.success(message);
@@ -61,6 +63,7 @@ export default function Login() {
 
     function handleSubmit(event) {
         event.preventDefault();
+        setInLogin(true);
         var body = {
             email: email,
             password: password
@@ -74,6 +77,7 @@ export default function Login() {
         })
         .catch(error => {
             notifyError(error);
+            setInLogin(false);
         })
     }
 
@@ -81,9 +85,7 @@ export default function Login() {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
+        <img alt="logo" src="showcase/images/logo.png" onError={(e) => e.target.src='http://51.68.139.166/img/logo200.png'} height="200" className="p-mr-2"></img>
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
@@ -121,15 +123,19 @@ export default function Login() {
             color="primary"
             className={classes.submit}
             disabled={!validateForm()}
+            style={{visibility: !inLogin ? 'visible' : 'hidden'}}
           >
             Sign In
           </Button>
+          <ProgressSpinner style={{width: '50px', height: '50px', display: 'block', visibility: inLogin ? 'visible' : 'hidden'}} strokeWidth="8" fill="#EEEEEE" animationDuration=".5s" disabled={true} />
         </form>
       </div>
       <Box mt={8}>
         <Copyright />
       </Box>
+      
     </Container>
+    
   );
   
 }

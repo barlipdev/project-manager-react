@@ -6,9 +6,12 @@ import { DeleteOutline } from "@material-ui/icons";
 import React from "react";
 import SearchBar from "material-ui-search-bar";
 import axios from "axios";
+import { Link } from "react-router-dom"
+import 'react-toastify/dist/ReactToastify.css';
+import Toastr from '../../utils/Toastr';
 
-
-  
+const notifySuccess = (message) => Toastr.success(message);
+const notifyError = (message) => Toastr.error(message);
 
 export class RecipeList extends React.Component {
 
@@ -40,6 +43,12 @@ export class RecipeList extends React.Component {
 
     const handleDelete = (id)=>{
         this.setState({recipes: this.state.recipes.filter((item) => item.id !== id)})
+        axios.delete('http://51.68.139.166:8091/recipe/'+id,{
+            headers: {"Authorization": "Bearer "+ sessionStorage.getItem("token")}
+        })
+        .then(() => {
+            notifySuccess("Recipe with ID: " + id + " removed succesfully!");
+        });
     }
 
     const requestSearch = (searchedVal) => {
@@ -60,16 +69,16 @@ export class RecipeList extends React.Component {
       };
 
     const columns = [
-        { field: 'id', headerName: 'ID', width: 220 },
+        { field: 'id', headerName: 'ID', width: 250 },
         {
           field: 'name',
           headerName: 'Recipe',
-          width: 350,
+          width: 500,
         },
         {
           field: 'foodType',
           headerName: 'Type',
-          width: 350,
+          width: 500,
         },
         {
             field: 'action',
@@ -78,6 +87,9 @@ export class RecipeList extends React.Component {
             renderCell: (params) => {
                 return (
                     <>
+                    <Link to={{pathname:"/editRecipe", state: { recipeId: params.row.id }}} >
+                        <button className="recipeEdit">Edit</button>
+                    </Link>
                     <DeleteOutline className="userListDelete" onClick={()=>handleDelete(params.row.id)}/>
                     </>
                 )
@@ -87,7 +99,12 @@ export class RecipeList extends React.Component {
 
         return (
             <div className="recipeList">
-                <h1 className="recipeListTitle">Recipes List</h1>
+                <div className="recipeTitleContainer">
+                <h1 className="recipeTitle">Recipes list</h1>
+                <Link to="/newRecipe">
+                    <button className="recipeAddButton">Create Recipe</button>
+                </Link>
+            </div>
                 <div className="recipeListTop">
                     <div className="recipeListCharts">
                         <div className="recipeListChart">

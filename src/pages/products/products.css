@@ -1,38 +1,38 @@
-.usersContainer{
+.productsContainer{
     flex: 5;
 }
 
-.userListContainer{
+.productListContainer{
     display: flex;
 }
 
-.userList{
+.productList{
     flex: 3;
     padding: 20px;
     
 }
 
-.userTable{
+.productTable{
     padding: 20px;
     box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
     -webkit-box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
     -moz-box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
 }
 
-.userListTitleContainer{
+.productListTitleContainer{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-.userListUser{
+.productListproduct{
     display: flex;
     align-items: center;
     
 }
 
-.userListImg{
+.productListImg{
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -40,7 +40,7 @@
     margin-right: 10px;
 }
 
-.userListEdit{
+.productListEdit{
     border: none;
     border-radius: 10px;
     padding: 5px 10px;
@@ -50,23 +50,23 @@
     margin-right: 20px;
 }
 
-.userListDelete{
+.productListDelete{
     color: red;
     cursor: pointer;
 }
 
-.user{
+.product{
     flex: 1;
     padding: 20px;
 }
 
-.userTitleContainer{
+.productTitleContainer{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.userAddButton{
+.productAddButton{
     width: 80px;
     border: none;
     padding: 5px;
@@ -77,13 +77,13 @@
     font-size: 16px;
 }
 
-.userContainer{
+.productContainer{
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.userShow{
+.productShow{
     flex: 1;
     padding: 20px;
     box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
@@ -91,7 +91,7 @@
     -moz-box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
 }
 
-.userUpdate{
+.productUpdate{
     flex: 2;
     padding: 20px;
     box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
@@ -100,98 +100,98 @@
     margin-left: 20px;
 }
 
-.userShowTop{
+.productShowTop{
     display: flex;
     align-items: center;
 }
 
-.userShowImg{
+.productShowImg{
     width: 100px;
     height: 100px;
     border-radius: 50px;
     object-fit: cover;
 }
 
-.userShowTopTitle{
+.productShowTopTitle{
     display: flex;
     flex-direction: column;
     margin-left: 20px;
 }
 
-.userShowUsername{
+.productShowproductname{
     font-weight: 600;
 }
 
-.userShowUserRole{
+.productShowproductRole{
     font-weight: 300;
 }
 
-.userShowBottom{
+.productShowBottom{
     margin-bottom: 20px;
 }
 
-.userShowTitle{
+.productShowTitle{
     font-style: 14px;
     font-weight: 600;
     color: rgb(175,170,170);
 
 }
 
-.userShowInfo{
+.productShowInfo{
     display: flex;
     align-items: center;
     margin: 20px 0px;
     color: #444;
 }
 
-.userShowIcon{
+.productShowIcon{
     font-style: 16px !important;
 }
 
-.userShowInfoTitle{
+.productShowInfoTitle{
     margin-left: 10px;
 }
 
-.userUpdateTitle{
+.productUpdateTitle{
     font-size: 24px;
     font-weight: 600;
 }
 
-.userUpdateForm{
+.productUpdateForm{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.userUpdateItem{
+.productUpdateItem{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
 }
 
-.userUpdateItem>label{
+.productUpdateItem>label{
     margin-bottom: 5px;
     font-size: 14px;
 }
 
-.userUpdateInput{
+.productUpdateInput{
     border: none;
     width: 250px;
     border-bottom: 1px solid grey;
 }
 
-.userUpdateRight{
+.productUpdateRight{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.userUpdateUpload{
+.productUpdateUpload{
     display: flex;
     align-items: center;
 }
 
-.userUpdateImg{
+.productUpdateImg{
     width: 100px;
     height: 100px;
     border-radius: 10px;
@@ -199,11 +199,11 @@
     margin-right: 20px;
 }
 
-.userUpdateIcon{
+.productUpdateIcon{
     cursor: pointer;
 }
 
-.userUpdateButton{
+.productUpdateButton{
     border: none;
     border-radius: 5px;
     padding: 5px;
@@ -213,27 +213,28 @@
     font-weight: 600;
 }
 
-.userCreateTitleContainer{
+.productCreateTitleContainer{
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.userCreateContainer{
+.productCreateContainer{
     display: flex;
     padding: 20px;
+    width: 600px;
     margin-top: 20px;
     box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
     -webkit-box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
     -moz-box-shadow: -1px 2px 15px 2px rgba(0,0,0,0.10);
 }
 
-.userCreateForm{
+.productCreateForm{
 
 }
 
-.userInput{
+.productInput{
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -254,14 +255,14 @@
     width: 500px;
 }
 
-.userCreatePhoto{
+.productCreatePhoto{
     margin-left: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.userCreateImg{
+.productCreateImg{
     width: 200px;
     height: 200px;
     border-radius: 10px;
@@ -269,7 +270,7 @@
     margin-right: 20px;
 }
 
-.userPhotoUpdateButton{
+.productPhotoUpdateButton{
     border: none;
     border-radius: 5px;
     margin-bottom: 40px;
@@ -280,3 +281,27 @@
     font-weight: 600;
 }
 
+.searchBar{
+    margin-bottom: 5px;
+}
+
+.expirationCalendar{
+    margin-top: 10px;
+    width: 550px;
+}
+
+.p-calendar{
+    width: 550px;
+}
+
+.userSearch{
+    margin-top: 10px;
+}
+
+.userDisplay{
+    display: flex;
+}
+.addUserProductButton{
+    margin-top: 10px;
+    float: right;
+}

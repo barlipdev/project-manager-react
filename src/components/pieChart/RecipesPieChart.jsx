@@ -103,7 +103,7 @@ export default class RecipesPieChart extends PureComponent {
   }
   render() {
     return (
-      <PieChart width={600} height={300}>
+      <PieChart width={750} height={300}>
         <Pie
           activeIndex={this.state.activeIndex}
           activeShape={renderActiveShape}

@@ -22,3 +22,30 @@
 .recipeListDataTable{
     margin-top: 10px;
 }
+
+.recipeTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recipeAddButton{
+    width: 160px;
+    border: none;
+    padding: 5px;
+    background-color: teal;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+.recipeEdit{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #3bb077;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}

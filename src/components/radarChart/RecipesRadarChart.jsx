@@ -29,7 +29,7 @@ export class RecipesRadarChart extends React.Component {
       return (
         <div className="radarChart">
             <RadarChart
-                width={600}
+                width={750}
                 height={300}
                 data={this.state.data}
                 >
