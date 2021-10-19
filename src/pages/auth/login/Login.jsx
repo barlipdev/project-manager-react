@@ -68,7 +68,15 @@ export default function Login() {
             email: email,
             password: password
         }
-        axios.post("http://51.68.139.166:8091/login",body,{headers: {"Access-Control-Allow-Origin": "*"}})
+        axios.post("http://51.68.139.166:8091/login",body,{
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "OPTIONS, DELETE, POST, GET, PATCH, PUT",
+            "Access-Control-Max-Age": "3600",
+            "Access-Control-Allow-Credentials": "true",
+            "Access-Control-Allow-Headers": "Content-Type"
+        }
+        })
         .then(response => {
             sessionStorage.setItem("token",response.data.authToken);
             sessionStorage.setItem("user",JSON.stringify(response.data.user));
